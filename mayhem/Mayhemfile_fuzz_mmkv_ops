@@ -1,0 +1,9 @@
+project: savantenvs/MMKV
+target: fuzz_mmkv_ops
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_mmkv_ops/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mmkv_ops
+    libfuzzer: true
+    timeout: 5

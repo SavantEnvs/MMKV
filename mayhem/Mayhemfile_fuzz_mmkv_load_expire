@@ -1,0 +1,9 @@
+project: savantenvs/MMKV
+target: fuzz_mmkv_load_expire
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_mmkv_load_expire/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mmkv_load_expire
+    libfuzzer: true
+    timeout: 5
